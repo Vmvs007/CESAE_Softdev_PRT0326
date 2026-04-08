@@ -20,7 +20,7 @@ public class Ex12 {
 
         System.out.print("\nOpção: ");
         opcao= input.nextInt();
-        
+
         switch (opcao){
             case 1:
                 System.out.println("\nCriar");
