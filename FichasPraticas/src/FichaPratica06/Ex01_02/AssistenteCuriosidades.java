@@ -1,10 +1,10 @@
-package FichaPratica06.Ex01;
+package FichaPratica06.Ex01_02;
 
 import java.util.Scanner;
 
-import static FichaPratica06.Ex01.BibliotecaConsolaBonita.copyright;
-import static FichaPratica06.Ex01.BibliotecaConsolaBonita.primaEnterParaContinuar;
-import static FichaPratica06.Ex01.BibliotecaCuriosidades.*;
+import static FichaPratica06.Ex01_02.BibliotecaConsolaBonita.copyright;
+import static FichaPratica06.Ex01_02.BibliotecaConsolaBonita.primaEnterParaContinuar;
+import static FichaPratica06.Ex01_02.BibliotecaCuriosidades.*;
 
 
 public class AssistenteCuriosidades {

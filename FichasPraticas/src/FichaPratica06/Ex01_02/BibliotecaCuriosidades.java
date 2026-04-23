@@ -1,6 +1,4 @@
-package FichaPratica06.Ex01;
-
-import java.util.Locale;
+package FichaPratica06.Ex01_02;
 
 public class BibliotecaCuriosidades {
 
