@@ -19,7 +19,7 @@ public class AnaliseVetor {
         tamanhoVetor = input.nextInt();
 
         int[] vetor = preencherVetor(tamanhoVetor);
-        
+
 
         do {
 
