@@ -1,8 +1,8 @@
-package FichaPratica06;
+package FichaPratica06.Demonstracao;
 
 import java.util.Scanner;
 
-import static FichaPratica06.BibliotecaNumeros.*;
+import static FichaPratica06.Demonstracao.BibliotecaNumeros.*;
 
 public class Ex00 {
 
