@@ -1,4 +1,4 @@
-package FichaPratica06.Ex01_02;
+package FichaPratica06;
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ public class BibliotecaConsolaBonita {
 
         System.out.print("\n(Prima enter para continuar)");
         input.nextLine();
-        input.nextLine();
+
         for (int i = 0; i < 200; i++) {
             System.out.println();
         }

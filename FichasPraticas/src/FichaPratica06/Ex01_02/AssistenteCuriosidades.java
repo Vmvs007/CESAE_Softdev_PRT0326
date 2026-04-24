@@ -2,8 +2,8 @@ package FichaPratica06.Ex01_02;
 
 import java.util.Scanner;
 
-import static FichaPratica06.Ex01_02.BibliotecaConsolaBonita.copyright;
-import static FichaPratica06.Ex01_02.BibliotecaConsolaBonita.primaEnterParaContinuar;
+import static FichaPratica06.BibliotecaConsolaBonita.copyright;
+import static FichaPratica06.BibliotecaConsolaBonita.primaEnterParaContinuar;
 import static FichaPratica06.Ex01_02.BibliotecaCuriosidades.*;
 
 

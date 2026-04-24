@@ -2,8 +2,7 @@ package FichaPratica06.Ex07_08;
 
 import java.util.Scanner;
 
-import static FichaPratica06.Ex01_02.BibliotecaConsolaBonita.*;
-import static FichaPratica06.Ex01_02.BibliotecaCuriosidades.*;
+import static FichaPratica06.BibliotecaConsolaBonita.*;
 import static FichaPratica06.Ex07_08.BibliotecaVetores.*;
 
 public class AnaliseVetor {
@@ -20,7 +19,6 @@ public class AnaliseVetor {
 
         int[] vetor = preencherVetor(tamanhoVetor);
 
-
         do {
 
             System.out.println("\n\n\n----- Análise de um Vetor -----");
@@ -31,6 +29,7 @@ public class AnaliseVetor {
             System.out.println("5. Crescente");
             System.out.println("6. Quantidade Pares");
             System.out.println("7. Pesquisar Valor");
+            System.out.println("8. Trocar Vetor");
             System.out.println("0. Sair");
 
             System.out.print("Opção: ");
@@ -44,29 +43,54 @@ public class AnaliseVetor {
                     break;
 
                 case 2:
-                    System.out.println("Menor");
-
+                    System.out.println("Maior: " + menorElemento(vetor));
                     break;
 
                 case 3:
-                    System.out.println("Somatório");
+                    System.out.println("Somatório: " + somatorio(vetor));
 
                     break;
 
                 case 4:
-                    System.out.println("Média");
+                    System.out.println("Média: " + media(vetor));
                     break;
 
                 case 5:
-                    System.out.println("Crescente");
+                    if (crescente(vetor)) {
+                        System.out.println("Crescente");
+                    } else {
+                        System.out.println("Não crescente");
+                    }
+
                     break;
 
                 case 6:
-                    System.out.println("Quantidade Pares");
+                    System.out.println("Quantidade Pares: " + contarPares(vetor));
                     break;
 
                 case 7:
                     System.out.println("Pesquisar Valor");
+
+                    System.out.print("Valor: ");
+                    int pesquisa = input.nextInt();
+
+                    if (existeValor(vetor, pesquisa)) {
+                        System.out.println("O número " + pesquisa + " existe no vetor.");
+                    } else {
+                        System.out.println("O número " + pesquisa + " NÃO existe no vetor.");
+                    }
+
+
+                    break;
+
+                case 8:
+                    System.out.println("Troca Valor");
+
+                    System.out.print("Tamanho do Vetor: ");
+                    tamanhoVetor = input.nextInt();
+
+                    vetor = preencherVetor(tamanhoVetor);
+
                     break;
 
                 case 0:
@@ -82,5 +106,6 @@ public class AnaliseVetor {
 
         } while (opcao != 0);
 
+        copyright();
     }
 }
