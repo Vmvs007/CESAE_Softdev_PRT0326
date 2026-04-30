@@ -8,7 +8,6 @@ public class BibliotecaFicheiros {
 
     public static void imprimirFicheiroNaConsola(String caminhoFicheiro) throws FileNotFoundException {
 
-
         File ficheiro = new File(caminhoFicheiro);
         Scanner fileScanner = new Scanner(ficheiro);
 
