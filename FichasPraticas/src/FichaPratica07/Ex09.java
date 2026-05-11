@@ -43,7 +43,7 @@ public class Ex09 {
 
         int contagemColunas = linhaSeparada.length;
 
-        return linha.split(",").length;
+        return contagemColunas;
     }
 
     public static String[][] lerFicheiroParaMatriz(String caminhoFicheiro, String delimitador) throws FileNotFoundException {
