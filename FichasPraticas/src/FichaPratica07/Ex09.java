@@ -33,23 +33,23 @@ public class Ex09 {
 
     }
 
-    public static int contarColunasFicheiro(String caminhoFicheiro) throws FileNotFoundException {
+    public static int contarColunasFicheiro(String caminhoFicheiro, String delimitador) throws FileNotFoundException {
 
         File ficheiro = new File(caminhoFicheiro);
         Scanner sc = new Scanner(ficheiro);
 
         String linha = sc.nextLine();
-        String[] linhaSeparada = linha.split(",");
+        String[] linhaSeparada = linha.split(delimitador);
 
         int contagemColunas = linhaSeparada.length;
 
-        return contagemColunas;
+        return linha.split(",").length;
     }
 
-    public static String[][] lerFicheiroParaMatriz(String caminhoFicheiro) throws FileNotFoundException {
+    public static String[][] lerFicheiroParaMatriz(String caminhoFicheiro, String delimitador) throws FileNotFoundException {
 
         int numeroLinhas = contarLinhasFicheiro(caminhoFicheiro) - 1;
-        int numeroColunas = contarColunasFicheiro(caminhoFicheiro);
+        int numeroColunas = contarColunasFicheiro(caminhoFicheiro, delimitador);
 
         int linhaAtualMatriz = 0;
 
@@ -63,7 +63,7 @@ public class Ex09 {
 
         while (sc.hasNextLine()) {
             String linha = sc.nextLine();
-            String[] linhaSeparada = linha.split(",");
+            String[] linhaSeparada = linha.split(delimitador);
 
 //            matrizCompleta[linhaAtualMatriz][0] = linhaSeparada[0];
 //            matrizCompleta[linhaAtualMatriz][1] = linhaSeparada[1];
@@ -99,25 +99,13 @@ public class Ex09 {
         }
     }
 
-
-    public static void main(String[] args) throws FileNotFoundException {
-
-        String[][] matrizMusicas = lerFicheiroParaMatriz("Ficheiros/exercicio_09.csv");
-
-        // Impressão da matriz
-        for (int linha = 0; linha < matrizMusicas.length; linha++) {
-            for (int coluna = 0; coluna < matrizMusicas[0].length; coluna++) {
-                System.out.print(matrizMusicas[linha][coluna] + " || ");
-            }
-            System.out.println();
-        }
-
+    public static void menuCliente(String[][] matrizMusicas){
         Scanner input = new Scanner(System.in);
 
         int opcao;
         do {
             System.out.println("\n\n\n------------------------------------------------");
-            System.out.println("----- Menu de Análise de Playlists -----");
+            System.out.println("----- Menu de Análise de Playlists - Cliente -----");
             System.out.println("1. Pesquisar por músicas de um determinado género");
             System.out.println("2. Pesquisar músicas de um determinado artista");
             System.out.println("3. Pesquisar música com maior duração");
@@ -165,6 +153,7 @@ public class Ex09 {
 
                 case 5:
                     System.out.println("5. Número de músicas da playlist");
+                    System.out.println(matrizMusicas.length);
                     break;
 
                 case 0:
@@ -177,6 +166,103 @@ public class Ex09 {
             }
 
         } while (opcao != 0);
+
+    }
+
+    public static void menuAdmin(String[][] matrizMusicas){
+        Scanner input = new Scanner(System.in);
+
+        int opcao;
+        do {
+            System.out.println("\n\n\n------------------------------------------------");
+            System.out.println("----- Menu de Análise de Playlists - Admin -----");
+            System.out.println("1. Adicionar nova música");
+            System.out.println("2. Remover música");
+            System.out.println("0. Sair");
+
+            System.out.print("Opção: ");
+            opcao = input.nextInt();
+
+            System.out.println("\n\n\n------------------------------------------------");
+
+            switch (opcao) {
+                case 1:
+                    System.out.println("1. Adicionar nova música");
+
+                    break;
+
+                case 2:
+                    System.out.println("2. Remover música");
+
+                    break;
+
+                case 0:
+                    System.out.println("0. Sair");
+                    break;
+
+                default:
+                    System.out.println("Opção Inválida: " + opcao);
+                    break;
+            }
+
+        } while (opcao != 0);
+    }
+
+    public static void menuLogin(String[][] matrizMusicas){
+        Scanner input = new Scanner(System.in);
+
+        int opcao;
+        do {
+            System.out.println("\n\n\n------------------------------------------------");
+            System.out.println("----- Bem-vindo/a ao Programa de Análise de Playlists -----");
+            System.out.println("1. Cliente");
+            System.out.println("2. Administrador");
+            System.out.println("0. Sair");
+
+            System.out.print("Opção: ");
+            opcao = input.nextInt();
+
+            System.out.println("\n\n\n------------------------------------------------");
+
+            switch (opcao) {
+                case 1:
+                    menuCliente(matrizMusicas);
+                    break;
+
+                case 2:
+                    System.out.print("Username: ");
+                    input.nextLine();
+                    String usernameInput = input.nextLine();
+
+                    System.out.print("Password: ");
+                    String passwordInput = input.nextLine();
+
+                    if(usernameInput.equalsIgnoreCase("it") && passwordInput.equalsIgnoreCase("12345")){
+                        menuAdmin(matrizMusicas);
+                    }else{
+                        System.out.println("\nCredenciais Inválidas");
+                    }
+
+                    break;
+
+                case 0:
+                    System.out.println("0. Sair");
+                    break;
+
+                default:
+                    System.out.println("Opção Inválida: " + opcao);
+                    break;
+            }
+
+        } while (opcao != 0);
+    }
+
+    public static void main(String[] args) throws FileNotFoundException {
+
+        String[][] matrizMusicas = lerFicheiroParaMatriz("Ficheiros/exercicio_09.csv",",");
+
+        menuLogin(matrizMusicas);
+
 
     }
 }
