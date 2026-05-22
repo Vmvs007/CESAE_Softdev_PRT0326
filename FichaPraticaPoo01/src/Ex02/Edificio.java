@@ -37,7 +37,7 @@ public class Edificio {
         return this.numeroAndares;
     }
 
-    public boolean isTemGaragem() {
+    public boolean getTemGaragem() {
         return this.temGaragem;
     }
 
