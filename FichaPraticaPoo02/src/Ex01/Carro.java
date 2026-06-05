@@ -86,6 +86,6 @@ public class Carro {
     }
 
     public void exibirDetalhes() {
-        System.out.println(this.marca + " " + this.modelo + " " + this.cor + " " + this.anoFabrico);
+        System.out.println(this.marca + " " + this.modelo + " " + this.cor + " " + this.anoFabrico + " | " + this.combustivel);
     }
 }
