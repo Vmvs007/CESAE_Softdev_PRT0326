@@ -1,0 +1,5 @@
+package Ex02Streamflix.Enums;
+
+public enum Genero {
+    ACAO, AVENTURA, COMEDIA, DRAMA, FICCAO_CIENTIFICA, FANTASIA, TERROR, ROMANCE, THRILLER, ANIMACAO
+}
