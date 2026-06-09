@@ -31,6 +31,10 @@ public class MeioAmbiente {
         this.seresVivos.add(serVivoNovo);
     }
 
+    public void removerSerVivo(SerVivo serVivoRemover){
+        this.seresVivos.remove(serVivoRemover);
+    }
+
     public boolean plantaBebe(int indexPlanta) {
 
         Planta plantaSelecionada = (Planta) this.seresVivos.get(indexPlanta);
@@ -97,5 +101,59 @@ public class MeioAmbiente {
             this.seresVivos.remove(indexInsetoAzarado);
             return true;
         }
+    }
+
+    public void plantaAbanaComVento(int indexPlanta){
+        // TODO: Método não desenvolvido
+    }
+
+    public void animalFazBarulho(int indexAnimal){
+        // TODO: Método não desenvolvido
+    }
+
+    public boolean animalBebe(int indexAnimal){
+        // TODO: Método não desenvolvido
+        return true;
+    }
+
+    public boolean animalCome(int indexAnimal){
+        // TODO: Método não desenvolvido
+        return true;
+    }
+
+    public void insetoChateia(int indexInseto){
+        // TODO: Método não desenvolvido
+    }
+
+    public void chuva(){
+        // TODO: Método não desenvolvido
+    }
+
+    public void chuvasTorrenciais(){
+        // TODO: Método não desenvolvido
+    }
+
+    public void trovoada(){
+        // TODO: Método não desenvolvido
+    }
+
+    public void seca(){
+        // TODO: Método não desenvolvido
+    }
+
+    public void erupcaoVulcanica(){
+        // TODO: Método não desenvolvido
+    }
+
+    public void tremorTerra(){
+        // TODO: Método não desenvolvido
+    }
+
+    public void incendio(){
+        // TODO: Método não desenvolvido
+    }
+
+    public void simulador(){
+        // TODO: Método não desenvolvido
     }
 }
