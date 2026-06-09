@@ -103,14 +103,27 @@ public class MeioAmbiente {
         }
     }
 
+    /**
+     * Comportamento quando uma planta abana com o vento
+     * @param indexPlanta Index da planta que vai abanar
+     */
     public void plantaAbanaComVento(int indexPlanta){
         // TODO: Método não desenvolvido
     }
 
+    /**
+     * Comportamento quando um animal faz o seu barulho característico
+     * @param indexAnimal Index do animal que vai fazer o barulho
+     */
     public void animalFazBarulho(int indexAnimal){
         // TODO: Método não desenvolvido
     }
 
+    /**
+     * Comportamento para um animal beber água do meio ambiente
+     * @param indexAnimal Index do animal que vai beber
+     * @return true - se o animal bebeu (e continua vivo) | false - se não bebeu e aí morre de sede (é removido do array de Seres Vivos)
+     */
     public boolean animalBebe(int indexAnimal){
         // TODO: Método não desenvolvido
         return true;
