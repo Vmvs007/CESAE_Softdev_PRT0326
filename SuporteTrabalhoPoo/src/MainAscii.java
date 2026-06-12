@@ -3,10 +3,10 @@ import java.io.FileNotFoundException;
 public class MainAscii {
     public static void main(String[] args) throws FileNotFoundException {
 
-        FileTools.printFile("AsciiFiles/castle.txt");
+        FileTools.printFile("resources/images/castle.txt");
 
         System.out.println("\n");
 
-        FileTools.printFile("AsciiFiles/dino.txt");
+        FileTools.printFile("resources/images/dino.txt");
     }
 }
