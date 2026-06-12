@@ -38,6 +38,10 @@ public class Animal extends SerVivo {
         return diasComFome;
     }
 
+    public void setDiasComFome(int diasComFome) {
+        this.diasComFome = diasComFome;
+    }
+
     @Override
     public void exibirDetalhes() {
         System.out.println(this.nome + " | " + this.especie + " | " + this.pais + " | " + this.peso + " Kg. | " + this.dieta + " | QI: " + this.inteligencia + " | Dias sem comer: " + this.diasComFome);

@@ -1,6 +1,6 @@
 package SeresVivos;
 
-public class SerVivo {
+public abstract class SerVivo {
     protected String nome;
     protected String especie;
     protected String pais;
