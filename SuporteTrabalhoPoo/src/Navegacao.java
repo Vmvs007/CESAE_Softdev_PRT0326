@@ -18,11 +18,8 @@ public class Navegacao {
         System.out.print("Escolhe: ");
         int escolhaCaminho = input.nextInt();
 
-        if (escolhaCaminho == 1) {
-            return 2;
-        } else if (escolhaCaminho == 2) {
-            return 3;
-        }
+        if (escolhaCaminho == 1)  return 2;
+        if (escolhaCaminho == 2)  return 3;
 
         return -1;
     }
