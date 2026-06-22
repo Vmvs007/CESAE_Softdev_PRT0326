@@ -6,11 +6,19 @@ import SeresVivos.Animal;
 import SeresVivos.Inseto;
 import SeresVivos.Planta;
 
+import static java.lang.Thread.sleep;
+
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
 
         Planta coqueiro = new Planta("Coquinho", "Coqueiro", "Brasil", 20, FamiliaPlanta.ARVORE, 5);
+        System.out.println("Tipo de Ser Vivo: ");
+        System.out.println(coqueiro.getClass().getSimpleName());
+
+        sleep(5000);
+
+
         Planta relva = new Planta("Verdinha", "Relva", "Portugal", 1, FamiliaPlanta.ERVA, 0);
         Planta ananas = new Planta("Casa do Spongebob", "Ananas", "Portugal", 1, FamiliaPlanta.FLOR, 3);
         Planta comeInsetos = new Planta("Come-Bichos", "Carnivora", "Bolivia", 2, FamiliaPlanta.COME_INSETOS, 4);
