@@ -1,0 +1,12 @@
+[INFO]: Programa começou
+[AVISO]: Utilizador tentou colocar um caracter não permitido
+[AVISO]: Utilizador não selecionou uma opção correta no menu
+[INFO]: Objeto de Carro criado
+[INFO]: Método ligar invocado
+[ERRO]: Programa estourou porque o método corrida deu problemas
+[INFO]: Programa começou
+[AVISO]: Utilizador tentou colocar um caracter não permitido
+[AVISO]: Utilizador não selecionou uma opção correta no menu
+[INFO]: Objeto de Carro criado
+[INFO]: Método ligar invocado
+[ERRO]: Programa estourou porque o método corrida deu problemas
