@@ -23,8 +23,8 @@ public class AdminView {
             System.out.println("\n-+-+-+-+-+-+-+-+- ADMINISTRADOR -+-+-+-+-+-+-+-+-");
             System.out.println("1. Produto mais vendido - quantidade");
             System.out.println("2. Produto mais vendido - valor");
-            System.out.println("3. Melhor venda - unidades");
-            System.out.println("4. Melhor venda - quantidade");
+            System.out.println("3. Melhor venda - quantidade");
+            System.out.println("4. Melhor venda - valor");
             System.out.println("5. Total vendas");
             System.out.println("6. Média Vendas");
             System.out.println("0. Voltar");
@@ -43,6 +43,8 @@ public class AdminView {
                     break;
 
                 case 3:
+                    System.out.println("-+-+-+-+- Melhor Venda -+-+-+-+-");
+                    System.out.println(this.adminController.melhorVendaQuantidade());
                     break;
 
                 case 4:

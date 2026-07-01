@@ -13,6 +13,22 @@ public class AdminController {
         this.vendaRepository = new VendaRepository();
     }
 
+    public Venda melhorVendaQuantidade() {
+
+        Venda melhorVenda = new Venda("", "", 0, 0);
+
+        for (Venda vendaAtual : this.vendaRepository.getListaVendas()) {
+
+            if (vendaAtual.getQuantidadeVendida() > melhorVenda.getQuantidadeVendida()) {
+                melhorVenda = vendaAtual;
+            }
+
+        }
+
+        return melhorVenda;
+
+    }
+
     public double valorTotalVendas() {
 
         double total = 0;

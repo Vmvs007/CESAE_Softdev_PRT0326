@@ -28,4 +28,9 @@ public class Venda {
     public double getPrecoUnitario() {
         return precoUnitario;
     }
+
+    @Override
+    public String toString() {
+        return this.tipoProduto + " | " + this.produto + " | Quant.: " + this.quantidadeVendida + " | Preço Uni.: " + this.precoUnitario;
+    }
 }
